@@ -1,27 +1,22 @@
-import './App.css';
-import Navbar from './componets/NavBar/Navbar';
-import { BrowserRouter as Router } from 'react-router-dom';
-import BalanceDisplay from './componets/Balance/BalanceDisplay';
-import Select from './componets/Select/Select';
-import Token from './componets/Token/Token';
-import ButtonArea from './componets/Button/ButtonArea';
-import RecentAcitity from './componets/Recent/RecentActivity';
-import Description from './componets/Description/Description';
-import Menu from './componets/Menu/Menu';
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Index from "./componets/Index";
+import ActivityPage from "./componets/Activity/ActivityPage";
+import WalletPage from "./componets/Wallet/WalletPage";
+import MarketPage from "./componets/Market/MarketPage";
+import EarnPage from "./componets/Earn/Earn";
 
 function App() {
   return (
     <div className="App">
       <Router>
-
-      <Navbar />
-      <BalanceDisplay />
-      <Select />
-      <Token />
-      <ButtonArea />
-      <RecentAcitity />
-      <Description />
-      <Menu />
+        <Switch>
+          <Route path="/" exact component={Index} />
+          <Route path="/activity" exact component={ActivityPage} />
+          <Route path="/wallet" exact component={WalletPage} />
+          <Route path="/market" exact component={MarketPage} />
+          <Route path="/earn" exact component={EarnPage} />
+        </Switch>
       </Router>
     </div>
   );

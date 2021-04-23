@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Content = styled.div`
   display: flex;
   justify-content: center;
-  height: 8vh;
+  height: 9vh;
 `;
 
 export const TokenContainer = styled.div`
@@ -19,7 +19,8 @@ export const TokenContainer = styled.div`
 export const TokenDiv = styled.div`
   h1 {
     border: solid 2px black;
-    margin-right: 20px;
+    margin-right: 15px;
+    margin-left:2px;
   }
 `;
 
